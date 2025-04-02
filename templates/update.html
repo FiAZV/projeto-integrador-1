@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Alterar Registro</h1>
+        <a href="/" class="btn btn-home">Home</a>
+    </div>
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form class="form-section" method="POST" action="/update">
+            <!-- Campo para ID -->
+            <div class="form-group">
+                <label for="id">ID do Registro:</label>
+                <input type="number" id="id" name="record_id" required>
+            </div>
+
+            <!-- Campos do formulário de criação -->
+            <div class="form-group">
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="water">Consumo de Água (litros):</label>
+                <input type="number" id="water" name="water_consumption" step="0.01" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="energy">Consumo de Energia (kWh):</label>
+                <input type="number" id="energy" name="energy_consumption" step="0.01" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="waste">Resíduos Recicláveis (%):</label>
+                <input type="number" id="waste" name="waste_consumption" min="0" max="100" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="transport">Transporte Utilizado:</label>
+                <select id="transport" name="transport_method" required>
+                    <option value="bicicleta">Bicicleta</option>
+                    <option value="transporte_publico">Transporte Público</option>
+                    <option value="transporte_eletrico">Transporte Elétrico</option>
+                    <option value="misto">Misto (Público e Privado)</option>
+                    <option value="combustivel_fossil">Combustíveis Fósseis</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Atualizar Registro</button>
+        </form>
+    </div>
+</body>
+</html>

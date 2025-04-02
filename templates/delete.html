@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Registro</title>
+    <!-- <link rel="stylesheet" href="C:\Users\filip\OneDrive\Documentos\PUC\PI1\projeto-integrador-1\front-end\static\css\styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Excluir Registro</h1>
+        <a href="/" class="btn btn-home">Home</a>
+    </div>
+
+    <div class="container">
+        <form class="form-section" method="POST" action="/delete">
+            <div class="form-group">
+                <label for="id">ID do Registro:</label>
+                <input type="number" id="id" name="record_id" required>
+            </div>
+            
+            <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+        </form>
+    </div>
+</body>
+</html>

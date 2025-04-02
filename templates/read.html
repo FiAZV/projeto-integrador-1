@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Registros</title>
+    <!-- <link rel="stylesheet" href="C:\Users\filip\OneDrive\Documentos\PUC\PI1\projeto-integrador-1\front-end\static\css\styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Registros de Monitoramento</h1>
+        <a href="/" class="btn btn-home">Home</a>
+    </div>
+
+    <div class="container">
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Água (L)</th>
+                        <th>Energia (kWh)</th>
+                        <th>Resíduos (%)</th>
+                        <th>Transporte</th>
+                        <th>Classificações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td>{{ record.id }}</td>
+                        <td>{{ record.data }}</td>
+                        <td>{{ record.consumo_agua_litros }}</td>
+                        <td>{{ record.consumo_energia_kwh }}</td>
+                        <td>{{ record.geracao_residuo_porcentagem }}</td>
+                        <td>{{ record.transporte_utilizado }}</td>
+                        <td>
+                            <div class="classification {{ record.classificacao_sustentabilidade_agua }}">Água</div>
+                            <div class="classification {{ record.classificacao_sustentabilidade_energia }}">Energia</div>
+                            <div class="classification {{ record.classificacao_sustentabilidade_residuo }}">Resíduos</div>
+                            <div class="classification {{ record.classificacao_sustentabilidade_transporte }}">Transporte</div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

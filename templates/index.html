@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Monitoramento</title>
+    <!-- <link rel="stylesheet" href="C:\Users\filip\OneDrive\Documentos\PUC\PI1\projeto-integrador-1\front-end\static\css\styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Sistema de Monitoramento Sustentável</h1>
+    </div>
+    
+    <div class="container">
+        <div class="nav-buttons">
+            <a href="/create" class="btn btn-primary">Inserir Registro</a>
+            <a href="/read" class="btn btn-primary">Listar Registros</a>
+            <a href="/update" class="btn btn-secondary">Alterar Registro</a>
+            <a href="/delete" class="btn btn-danger">Excluir Registro</a>
+        </div>
+    </div>
+</body>
+</html>
