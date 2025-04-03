@@ -105,14 +105,9 @@ def classify_consumption(classification_rules, id, consumption):
         return sustainability_low
     
 def classify_transport(transport_rules, transport_method):
-
-    print(f"Transport method cleaned: {transport_method}")
     
     for type, classification in transport_rules.items():
-        print(f"Comparing type:{type.lower()} with cleaned_method:{transport_method}")
-        print(f"Classification: {classification}")
         if type.lower() == transport_method:
-            print(f"Classification found: {classification}")
             return classification
     
     return "indefinido" 
