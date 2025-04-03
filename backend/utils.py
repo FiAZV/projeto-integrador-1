@@ -75,6 +75,8 @@ def get_classification_rules_transport(connection):
         transport_rules = {}
         for row in results:
             transport_rules[row['tipo_transporte']] = row['classificacao_sustentabilidade']
+            
+        print(transport_rules)
         
         print("Transport classification rules fetched successfully.") 
         return transport_rules   
@@ -104,10 +106,13 @@ def classify_consumption(classification_rules, id, consumption):
     
 def classify_transport(transport_rules, transport_method):
 
-    cleaned_method = transport_method.strip().lower()
+    print(f"Transport method cleaned: {transport_method}")
     
     for type, classification in transport_rules.items():
-        if type.lower() == cleaned_method:
+        print(f"Comparing type:{type.lower()} with cleaned_method:{transport_method}")
+        print(f"Classification: {classification}")
+        if type.lower() == transport_method:
+            print(f"Classification found: {classification}")
             return classification
     
     return "indefinido" 
@@ -198,7 +203,7 @@ def read_records(connection):
     SELECT 
         * 
     FROM MONITORAMENTOS_SUSTENTABILIDADE
-    ORDER BY data, id DESC
+    ORDER BY data DESC, id DESC
     '''
     
     try:  
