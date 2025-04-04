@@ -8,8 +8,6 @@ Aplicação web para monitoramento e classificação de indicadores de sustentab
 
 - **CRUD Completo**: Crie, leia, atualize e delete registros de consumo
 - **Classificação Automática**: Sistema inteligente de categorização de sustentabilidade
-- **Dashboard Integrado**: Visualização consolidada dos dados
-- **Gestão de Transporte**: Controle de métodos de transporte e seu impacto
 
 ## ⚙️ Instalação Local
 
@@ -132,6 +130,7 @@ sustentatrack/
 │   └── css/
 │       └── styles.css    # Estilos principais
 ├── templates/
+│   ├── index.html        # Homepage
 │   ├── create.html       # Formulário de criação
 │   ├── read.html         # Listagem de dados
 │   ├── update.html       # Edição de registros
@@ -153,27 +152,3 @@ sustentatrack/
 
 ### Diagrama Entidade-Relacionamento
 ![Diagrama ER](https://via.placeholder.com/600x400.png?text=Diagrama+ER+do+Banco+de+Dados)
-
-## 🤝 Como Contribuir
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/incrivel`)
-3. Commit suas mudanças (`git commit -m 'Adiciona feature incrível'`)
-4. Push para a branch (`git push origin feature/incrivel`)
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-```
-
-Este README fornece uma documentação completa para:
-1. Instalação local
-2. Configuração do ambiente
-3. Estrutura do projeto
-4. Operações básicas
-5. Gestão do banco de dados
-6. Processo de contribuição
-
-Personalize com informações específicas do seu projeto e URLs reais quando disponíveis.
