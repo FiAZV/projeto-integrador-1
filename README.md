@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS CLASSIFICACAO_TRANSPORTES (
     classificacao_sustentabilidade VARCHAR(50) NOT NULL
 );
 
+-- Inserção dos dados de classificação de consumo de água
 INSERT INTO CLASSIFICACAO_CONSUMO (tipo_consumo, unidade_medida, sustentabilidade_alta_max, sustentabilidade_baixa_min)
 VALUES 
 ('Consumo de Água', 'litros', 150, 200);
