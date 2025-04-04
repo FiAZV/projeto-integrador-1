@@ -1,5 +1,5 @@
 ﻿
-# SustentaTrack - Sistema de Monitoramento Sustentável
+# Sistema de Monitoramento Sustentável
 
 
 Aplicação web para monitoramento e classificação de indicadores de sustentabilidade, com integração a banco de dados MySQL.
@@ -134,8 +134,3 @@ sustentatrack/
 ├── .env                  # Configurações
 └── requirements.txt      # Dependências
 ```
-
-## 📊 Banco de Dados
-
-### Diagrama Entidade-Relacionamento
-![Diagrama ER](https://via.placeholder.com/600x400.png?text=Diagrama+ER+do+Banco+de+Dados)
