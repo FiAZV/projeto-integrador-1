@@ -17,13 +17,8 @@ Aplicação web para monitoramento e classificação de indicadores de sustentab
 - Git (opcional)
 
 # Clone o repositório
-git clone https://github.com/seu-usuario/sustentatrack.git
+git clone [https://github.com/seu-usuario/sustentatrack.git](https://github.com/FiAZV/projeto-integrador-1.git)
 cd sustentatrack
-
-# Crie e ative o ambiente virtual
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
 
 # Instale as dependências
 pip install -r requirements.txt
@@ -139,14 +134,6 @@ sustentatrack/
 ├── .env                  # Configurações
 └── requirements.txt      # Dependências
 ```
-
-## 🧪 Tecnologias Utilizadas
-
-- **Flask**: Framework web principal
-- **MySQL**: Armazenamento de dados
-- **Jinja2**: Templates HTML dinâmicos
-- **python-dotenv**: Gestão de variáveis de ambiente
-- **MySQL Connector**: Interface Python/MySQL
 
 ## 📊 Banco de Dados
 
