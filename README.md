@@ -134,3 +134,72 @@ sustentatrack/
 ├── .env                  # Configurações
 └── requirements.txt      # Dependências
 ```
+----
+## 📋 Guia de Uso Passo a Passo
+- ### 1. Página Inicial (Home)
+    Acesse http://localhost:5000.
+    
+    Navegue usando os botões:
+
+    - 🟢 Inserir Registro: Para cadastrar novos dados.
+
+    - 📋 Listar Registros: Para visualizar todos os registros.
+    
+    - ✏️ Alterar Registro: Para editar dados existentes.
+    
+    - 🗑️ Excluir Registro: Para remover registros permanentemente
+
+- ### 2. Inserir Registro
+    Clique em "Inserir Registro" na Home.
+    
+    Preencha o formulário:
+    
+    - Data: Formato AAAA-MM-DD (ex: 2023-10-20).
+    
+    - Água (L): Valores decimais com ponto (ex: 150.5).
+    
+    - Energia (kWh): Exemplo: 8.3.
+    
+    - Resíduos (%): Entre 0 e 100 (ex: 75).
+    
+    - Transporte: Selecione uma opção do menu.
+    
+    Clique em 🔄 Salvar Registro.
+
+- ### 3. Listar Registros
+    Clique em "Listar Registros" na Home.
+    
+    A tabela mostrará: ID, data, consumo de água/energia, resíduos, transporte.
+    
+    Classificações: Cores ou rótulos automáticos (ex: alta, moderada).
+    
+- ### 4. Alterar Registro
+    Clique em "Alterar Registro" na Home.
+    
+    Insira o ID do Registro (ex: 5).
+    
+    Edite os campos desejados.
+    
+    Clique em ✏️ Atualizar Registro.
+
+- ### 5. Excluir Registro
+    Clique em "Excluir Registro" na Home.
+    
+    Insira o ID do Registro (ex: 3).
+    
+    Confirme com 🗑️ Confirmar Exclusão.
+
+- ### 6. Dicas Importantes
+    Validações:
+    
+    Insira apenas valores positivos
+    
+    Decimais usam ponto (ex: 10.5).
+    
+    Transporte: Use exatamente as opções do menu.
+    
+    Erros Comuns:
+    
+    Campos vazios ou formatos inválidos bloqueiam o envio.
+    
+    IDs inexistentes exibem mensagens de erro.
