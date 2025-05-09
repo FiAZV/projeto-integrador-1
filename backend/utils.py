@@ -1,15 +1,4 @@
 import mysql.connector
-import os
-from dotenv import load_dotenv
-
-# Definindo Constantes
-#CONSTANTES DO BANCO DE DADOS
-DB_HOST = "localhost"
-DB_USER = "root"
-DB_PASSWORD = "Filipe@28"
-DB_DATABASE = "pi1"
-
-# def get_classification_limits(id):
 
 # Função de conexão ao banco de dados
 def connect_database(db_config):
@@ -19,7 +8,11 @@ def connect_database(db_config):
             host = db_config['host'],
             user = db_config['user'],
             password = db_config['password'],
-            database = db_config['database']
+            database = db_config['database'],
+            port=db_config['port'],
+            auth_plugin=db_config['auth_plugin'],
+            ssl_disabled=db_config['ssl_disabled'],
+            use_pure=db_config['use_pure']
         )
         print("Successfully connected to database.")
         return connection
