@@ -20,7 +20,11 @@ db_config = {
     "host": os.getenv('DB_HOST'),
     "user": os.getenv('DB_USER'),
     "password": os.getenv('DB_PASSWORD'),
-    "database": os.getenv('DB_DATABASE')
+    "database": os.getenv('DB_DATABASE'),
+    "port":3306,
+    "auth_plugin":'mysql_native_password',
+    "ssl_disabled":True,
+    "use_pure":True
 }
 
 # Routes
